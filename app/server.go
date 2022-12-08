@@ -38,5 +38,5 @@ func processCommands(connection net.Conn) {
 		fmt.Println("Error reading:", err.Error())
 	}
 	fmt.Println("Received: ", string(buffer[:mLen]))
-	_, err = connection.Write([]byte("+PONG\r"))
+	_, err = connection.Write([]byte("+PONG\r\n"))
 }
